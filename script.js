@@ -144,6 +144,24 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
+// ========== Dark / Light mode toggle ==========
+const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = themeToggle.querySelector('.theme-icon');
+
+// Load saved preference (defaults to dark)
+const savedTheme = localStorage.getItem('theme') || 'dark';
+if (savedTheme === 'light') {
+  document.body.classList.add('light-mode');
+  themeIcon.textContent = '☀️';
+}
+
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  const isLight = document.body.classList.contains('light-mode');
+  themeIcon.textContent = isLight ? '☀️' : '🌙';
+  localStorage.setItem('theme', isLight ? 'light' : 'dark');
+});
+
 // ========== Console message ==========
 console.log('%c👋 hey there, dev friend', 'color: #7cf0a0; font-size: 18px; font-weight: bold;');
 console.log('%cpoking around the source? nice.', 'color: #9097a1; font-size: 13px;');

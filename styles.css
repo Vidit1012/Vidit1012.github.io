@@ -17,6 +17,25 @@
   --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+/* Light mode palette */
+body.light-mode {
+  --bg: #fafaf7;
+  --bg-elev: #ffffff;
+  --border: #e5e5e0;
+  --border-strong: #d0d0c8;
+  --text: #1a1a1a;
+  --text-dim: #555555;
+  --text-mute: #888888;
+  --accent: #2a8f4a;
+  --accent-soft: #2a8f4a15;
+}
+
+/* Adjust grid opacity for light mode */
+body.light-mode::before { opacity: 0.4; }
+
+/* Nav background for light mode */
+body.light-mode nav { background: rgba(250, 250, 247, 0.75); }
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 
@@ -160,6 +179,40 @@ nav {
 }
 @media (max-width: 500px) {
   .nav-links a:nth-child(n+4) { display: none; }
+}
+
+/* Theme toggle button */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.theme-toggle {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.3s;
+  padding: 0;
+  color: inherit;
+}
+.theme-toggle:hover {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  transform: rotate(20deg);
+}
+.theme-icon {
+  transition: transform 0.5s;
+  display: inline-block;
+}
+@media (pointer: coarse) {
+  .theme-toggle { cursor: pointer; }
 }
 
 /* ===== Hero ===== */
