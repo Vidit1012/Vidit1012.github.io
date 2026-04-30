@@ -87,7 +87,7 @@
     </p>
   </section>
 
-  <!-- SKILLS -->
+<!-- SKILLS -->
 <section id="skills" class="reveal">
   <div class="section-label">02 / Skills</div>
   <h2>Tools I work with. 🧠</h2>
@@ -115,6 +115,10 @@
         <div class="chip">LLMs</div>
         <div class="chip">RAG</div>
         <div class="chip">ChromaDB</div>
+        <div class="chip">LangGraph</div>
+        <div class="chip">LlamaIndex</div>
+        <div class="chip">MLflow</div>
+        <div class="chip">FinBERT</div>
       </div>
     </div>
     <div class="skill-group" data-hover>
@@ -145,6 +149,8 @@
         <div class="chip">MySQL</div>
         <div class="chip">NoSQL</div>
         <div class="chip">Linux</div>
+        <div class="chip">Redis</div>
+        <div class="chip">CI/CD</div>
       </div>
     </div>
     <div class="skill-group" data-hover>
@@ -239,9 +245,27 @@
   <div class="section-label">05 / Projects</div>
   <h2>Things I've built. 🛠️</h2>
   <div class="projects">
-
     <div class="project" data-hover>
       <div class="project-num">001</div>
+      <div>
+        <div class="project-title">AlphaSignal — Financial News Sentiment & Market Intelligence Agent</div>
+        <div class="project-desc">Fine-tuned FinBERT sentiment classifier and LangGraph agent for real-time market intelligence over live financial news.</div>
+        <div class="project-tech"><span>Python</span><span>FinBERT</span><span>LangGraph</span><span>LlamaIndex</span><span>ChromaDB</span><span>Redis</span><span>FastAPI</span><span>Ollama</span><span>MLflow</span><span>React</span><span>Tailwind CSS</span></div>
+      </div>
+      <div class="project-arrow">↗</div>
+      <div class="project-details">
+        <div class="project-details-inner">
+          <p>Fine-tuned FinBERT on the Twitter Financial News Sentiment dataset achieving <strong>88.3% accuracy</strong> and <strong>84.5% F1 macro</strong>, tracked across multiple learning rate experiments in MLflow with confusion matrix and classification report artifacts.</p>
+          <p>Built a LangGraph agent with 3 tools — sentiment inference, RAG-powered news search via LlamaIndex + ChromaDB, and signal aggregation — using Ollama llama3.2 for fully local multi-step market reasoning.</p>
+          <p>Implemented Redis caching via Upstash reducing repeated ticker query latency to <strong>sub-100ms</strong>, served through a FastAPI backend with a GitHub Actions CI/CD pipeline running pytest and flake8 on every push.</p>
+          <div class="project-links">
+            <a href="https://github.com/Vidit1012/alphasignal" data-hover>github →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project" data-hover>
+      <div class="project-num">002</div>
       <div>
         <div class="project-title">Knowledge Distillation Research Assistant</div>
         <div class="project-desc">RAG-based Q&A system for querying and synthesizing knowledge across 6 foundational knowledge distillation research papers.</div>
@@ -260,7 +284,7 @@
     </div>
 
     <div class="project" data-hover>
-      <div class="project-num">002</div>
+      <div class="project-num">003</div>
       <div>
         <div class="project-title">Clairvoyix — Private GPU-Powered AI Compute Platform</div>
         <div class="project-desc">Industry collaboration with Advance2000. Multi-model AI platform running on private GPU infrastructure for automated roof analysis.</div>
@@ -279,7 +303,7 @@
     </div>
 
     <div class="project" data-hover>
-      <div class="project-num">003</div>
+      <div class="project-num">004</div>
       <div>
         <div class="project-title">Object Detection Benchmarking & Analysis</div>
         <div class="project-desc">Benchmarked YOLOv5, SSD, and Faster R-CNN on the Pascal VOC 2012 dataset across accuracy and inference speed.</div>
@@ -298,7 +322,7 @@
     </div>
 
   <div class="project" data-hover>
-    <div class="project-num">004</div>
+    <div class="project-num">005</div>
     <div>
       <div class="project-title">Sign Me Up — Sign Language Classification System</div>
       <div class="project-desc">Real-time ML-powered gesture recognition tool that classifies sign language from uploaded images, built to improve accessibility for speech-impaired users.</div>
@@ -318,7 +342,7 @@
   </div>
 
     <div class="project" data-hover>
-      <div class="project-num">005</div>
+      <div class="project-num">006</div>
       <div>
         <div class="project-title">Enhanced Detection of PFAS Using Neural Networks</div>
         <div class="project-desc">Neural network classifier for per- and polyfluoroalkyl substances using molecular SMILES strings and engineered chemical features.</div>
@@ -337,7 +361,7 @@
     </div>
 
     <div class="project" data-hover>
-      <div class="project-num">006</div>
+      <div class="project-num">007</div>
       <div>
         <div class="project-title">AI Model War — DeepSeek vs ChatGPT</div>
         <div class="project-desc">Database-driven analysis of LLM performance using a normalized PostgreSQL schema, optimized queries, and indexing strategies.</div>
@@ -356,7 +380,7 @@
     </div>
 
     <div class="project" data-hover>
-      <div class="project-num">007</div>
+      <div class="project-num">008</div>
       <div>
         <div class="project-title">Fraudulent Job Posting Detection</div>
         <div class="project-desc">Supervised learning pipeline to flag fake job listings, using resampling techniques to handle severe class imbalance.</div>
@@ -375,7 +399,7 @@
     </div>
 
     <div class="project" data-hover>
-      <div class="project-num">008</div>
+      <div class="project-num">009</div>
       <div>
         <div class="project-title">Medical Report Generation Using Chest X-ray</div>
         <div class="project-desc">Attention-based encoder-decoder model that generates diagnostic text reports directly from chest X-ray images.</div>
