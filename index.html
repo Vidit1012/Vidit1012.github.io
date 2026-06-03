@@ -269,6 +269,25 @@
     <div class="project" data-hover>
       <div class="project-num">002</div>
       <div>
+        <div class="project-title">Distributed In Memory Cache System</div>
+        <div class="project-desc">Production grade distributed cache built from scratch with consistent hashing, write replication, and automatic failover across 3 nodes.</div>
+        <div class="project-tech"><span>Python</span><span>Consistent Hashing</span><span>TCP Sockets</span><span>Threading</span><span>Pytest</span></div>
+      </div>
+      <div class="project-arrow">↗</div>
+      <div class="project-details">
+        <div class="project-details-inner">
+          <p>Built a distributed in memory cache from scratch without any managed cache library, implementing an LRU eviction policy using OrderedDict with O(1) get and set operations and thread safety via threading.Lock.</p>
+          <p>Designed a consistent hashing ring with 150 virtual nodes per physical node ensuring even key distribution across 3 nodes with only 1/N keys remapping on topology changes, and a router proxy that forwards client requests to the correct node.</p>
+          <p>Implemented write replication to each key's clockwise neighbor and a heartbeat mechanism pinging nodes every 3 seconds for automatic failover, sustaining <strong>4,137 req/s</strong> throughput at <strong>100% cache hit rate</strong> with <strong>10.9ms</strong> median GET latency and <strong>sub-53ms</strong> p99 across <strong>10,000</strong> concurrent requests.</p>
+          <div class="project-links">
+            <a href="https://github.com/Vidit1012/distributed-cache" data-hover>github →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project" data-hover>
+      <div class="project-num">003</div>
+      <div>
         <div class="project-title">Knowledge Distillation Research Assistant</div>
         <div class="project-desc">RAG-based Q&A system for querying and synthesizing knowledge across 6 foundational knowledge distillation research papers.</div>
         <div class="project-tech"><span>Python</span><span>FastAPI</span><span>LangChain</span><span>ChromaDB</span><span>Groq LLM</span><span>React</span><span>Tailwind CSS</span></div>
@@ -284,9 +303,8 @@
         </div>
       </div>
     </div>
-
     <div class="project" data-hover>
-      <div class="project-num">003</div>
+      <div class="project-num">004</div>
       <div>
         <div class="project-title">Clairvoyix — Private GPU-Powered AI Compute Platform</div>
         <div class="project-desc">Industry collaboration with Advance2000. Multi-model AI platform running on private GPU infrastructure for automated roof analysis and document summarization.</div>
@@ -303,9 +321,8 @@
         </div>
       </div>
     </div>
-
     <div class="project" data-hover>
-      <div class="project-num">004</div>
+      <div class="project-num">005</div>
       <div>
         <div class="project-title">Object Detection Benchmarking & Analysis</div>
         <div class="project-desc">Benchmarked YOLOv5, SSD, and Faster R-CNN on the Pascal VOC 2012 dataset across accuracy and inference speed.</div>
@@ -322,29 +339,27 @@
         </div>
       </div>
     </div>
-
-  <div class="project" data-hover>
-    <div class="project-num">005</div>
-    <div>
-      <div class="project-title">Sign Me Up — Sign Language Classification System</div>
-      <div class="project-desc">Real-time ML-powered gesture recognition tool that classifies sign language from uploaded images, built to improve accessibility for speech-impaired users.</div>
-      <div class="project-tech"><span>Python</span><span>Streamlit</span><span>Machine Learning</span><span>Computer Vision</span></div>
-    </div>
-    <div class="project-arrow">↗</div>
-    <div class="project-details">
-      <div class="project-details-inner">
-        <p>Built an ML inference pipeline for image-based gesture classification, enabling real-time prediction from uploaded inputs.</p>
-        <p>Delivered an interactive Streamlit application for image upload, prediction visualization, and user interaction to enhance accessibility for speech-impaired users.</p>
-        <div class="project-links">
-          <a href="https://github.com/Vidit1012/ASL-Classifier" data-hover>github →</a>
-          <a href="https://asl-classifier-dl.streamlit.app/" data-hover>live demo →</a>
+    <div class="project" data-hover>
+      <div class="project-num">006</div>
+      <div>
+        <div class="project-title">Sign Me Up — Sign Language Classification System</div>
+        <div class="project-desc">Real-time ML-powered gesture recognition tool that classifies sign language from uploaded images, built to improve accessibility for speech-impaired users.</div>
+        <div class="project-tech"><span>Python</span><span>Streamlit</span><span>Machine Learning</span><span>Computer Vision</span></div>
+      </div>
+      <div class="project-arrow">↗</div>
+      <div class="project-details">
+        <div class="project-details-inner">
+          <p>Built an ML inference pipeline for image-based gesture classification, enabling real-time prediction from uploaded inputs.</p>
+          <p>Delivered an interactive Streamlit application for image upload, prediction visualization, and user interaction to enhance accessibility for speech-impaired users.</p>
+          <div class="project-links">
+            <a href="https://github.com/Vidit1012/ASL-Classifier" data-hover>github →</a>
+            <a href="https://asl-classifier-dl.streamlit.app/" data-hover>live demo →</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-
     <div class="project" data-hover>
-      <div class="project-num">006</div>
+      <div class="project-num">007</div>
       <div>
         <div class="project-title">Enhanced Detection of PFAS Using Neural Networks</div>
         <div class="project-desc">Neural network classifier for per- and polyfluoroalkyl substances using molecular SMILES strings and engineered chemical features.</div>
@@ -361,9 +376,8 @@
         </div>
       </div>
     </div>
-
     <div class="project" data-hover>
-      <div class="project-num">007</div>
+      <div class="project-num">008</div>
       <div>
         <div class="project-title">AI Model War — DeepSeek vs ChatGPT</div>
         <div class="project-desc">Database-driven analysis of LLM performance using a normalized PostgreSQL schema, optimized queries, and indexing strategies.</div>
@@ -380,9 +394,8 @@
         </div>
       </div>
     </div>
-
     <div class="project" data-hover>
-      <div class="project-num">008</div>
+      <div class="project-num">009</div>
       <div>
         <div class="project-title">Fraudulent Job Posting Detection</div>
         <div class="project-desc">Supervised learning pipeline to flag fake job listings, using resampling techniques to handle severe class imbalance.</div>
@@ -399,9 +412,8 @@
         </div>
       </div>
     </div>
-
     <div class="project" data-hover>
-      <div class="project-num">009</div>
+      <div class="project-num">010</div>
       <div>
         <div class="project-title">Medical Report Generation Using Chest X-ray</div>
         <div class="project-desc">Attention-based encoder-decoder model that generates diagnostic text reports directly from chest X-ray images.</div>
@@ -418,7 +430,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </section>
 
