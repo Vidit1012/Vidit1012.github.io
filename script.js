@@ -75,7 +75,7 @@ function updateTime() {
   document.getElementById('live-time').textContent = now.toLocaleTimeString('en-US', opts) + ' EST';
 
   // Dynamic greeting based on local hour
-  const hour = parseInt(now.toLocaleString('en-US', { timeZone: 'America/New_York', hour: '2-digit', hour12: false }));
+  const hour = parseInt(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', hour12: false }));
   const greetEl = document.getElementById('greeting');
   let greet = 'Hello';
   if (hour >= 5 && hour < 12) greet = 'Good morning';
