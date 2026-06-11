@@ -71,7 +71,7 @@ type();
 // ========== Live clock + dynamic greeting ==========
 function updateTime() {
   const now = new Date();
-  const opts = { timeZone: 'America/New_York', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
+  const opts = { timeZone: 'America/Los_Angeles', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
   document.getElementById('live-time').textContent = now.toLocaleTimeString('en-US', opts) + ' EST';
 
   // Dynamic greeting based on local hour
