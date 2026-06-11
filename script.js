@@ -72,7 +72,7 @@ type();
 function updateTime() {
   const now = new Date();
   const opts = { timeZone: 'America/Los_Angeles', hour12: false, hour: '2-digit', minute: '2-digit', second: '2-digit' };
-  document.getElementById('live-time').textContent = now.toLocaleTimeString('en-US', opts) + ' EST';
+  document.getElementById('live-time').textContent = now.toLocaleTimeString('en-US', opts) + ' PST';
 
   // Dynamic greeting based on local hour
   const hour = parseInt(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles', hour: '2-digit', hour12: false }));
