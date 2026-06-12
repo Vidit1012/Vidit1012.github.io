@@ -100,7 +100,7 @@
         <div class="chip">C++</div>
         <div class="chip">Java</div>
         <div class="chip">SQL</div>
-        <div class="chip">Ruby</div>
+        <div class="chip">Go</div>
         <div class="chip">JavaScript</div>
       </div>
     </div>
@@ -116,11 +116,10 @@
         <div class="chip">OpenCV</div>
         <div class="chip">LLMs</div>
         <div class="chip">RAG</div>
-        <div class="chip">ChromaDB</div>
         <div class="chip">LangGraph</div>
         <div class="chip">LlamaIndex</div>
         <div class="chip">MLflow</div>
-        <div class="chip">FinBERT</div>
+        <div class="chip">Vector Databases</div>
       </div>
     </div>
     <div class="skill-group" data-hover>
@@ -128,9 +127,10 @@
       <div class="skill-chips">
         <div class="chip">FastAPI</div>
         <div class="chip">Flask</div>
-        <div class="chip">Django</div>
+        <div class="chip">Node.js</div>
         <div class="chip">REST APIs</div>
-        <div class="chip">LangChain</div>
+        <div class="chip">gRPC</div>
+        <div class="chip">Apache Kafka</div>
       </div>
     </div>
     <div class="skill-group" data-hover>
@@ -145,21 +145,21 @@
       <div class="skill-group-title">Infrastructure & Databases</div>
       <div class="skill-chips">
         <div class="chip">Docker</div>
+        <div class="chip">Kubernetes</div>
         <div class="chip">Git</div>
-        <div class="chip">Nginx</div>
         <div class="chip">PostgreSQL</div>
         <div class="chip">MySQL</div>
-        <div class="chip">NoSQL</div>
-        <div class="chip">Linux</div>
-        <div class="chip">Prometheus</div>
         <div class="chip">Redis</div>
+        <div class="chip">Prometheus</div>
         <div class="chip">CI/CD</div>
+        <div class="chip">Linux</div>
       </div>
     </div>
     <div class="skill-group" data-hover>
       <div class="skill-group-title">Cloud</div>
       <div class="skill-chips">
-        <div class="chip">AWS</div>
+        <div class="chip">AWS EC2</div>
+        <div class="chip">AWS RDS</div>
       </div>
     </div>
   </div>
@@ -208,9 +208,9 @@
       <div class="exp-role">ML/AI Engineering Intern</div>
       <div class="exp-company">FourSteps Solutions · Fremont, California</div>
       <ul class="exp-list">
-        <li>Resolved a production security vulnerability in a FastAPI backend by redesigning the RBAC permission architecture to enforce least-privilege access across roles, closing a billing data exposure risk.</li>
-        <li>Proposed and shipped a new permission layer during code review that separated internal analytics from customer-facing access, preventing a potential data leak in a live PostgreSQL backed system.</li>
-        <li>Built a pytest suite verifying the full permission matrix against live SQLAlchemy models and independently traced end-to-end data flow across a large multi-repo Python codebase.</li>
+        <li>Identified and resolved a production RBAC vulnerability in a FastAPI backend, redesigning the permission architecture to enforce least-privilege access across roles and closing a billing data exposure risk.</li>
+        <li>Proposed and shipped a permission layer during code review that separated internal analytics from customer-facing access, preventing a potential data leak in a live PostgreSQL backed system.</li>
+        <li>Built a pytest suite verifying the full permission matrix against live SQLAlchemy models, traced request flow across multiple Python services to identify authorization gaps, and documented secure access patterns for future backend changes.</li>
       </ul>
     </div>
   </div>
@@ -221,9 +221,9 @@
       <div class="exp-role">Software Development Intern</div>
       <div class="exp-company">Bluebird AI · San Ramon, California</div>
       <ul class="exp-list">
-        <li>Enabled real-time model inference for a voice-driven system by building FastAPI backend services to process user inputs and serve predictions in production.</li>
-        <li>Implemented an end-to-end inference pipeline to transform audio inputs into structured predictions using Google Speech-to-Text and Gemini LLM APIs with secure routing and response generation.</li>
-        <li>Reduced request latency by 30% by optimizing API concurrency, restructuring inference execution flow, and deploying services behind Nginx to improve throughput and scalability.</li>
+        <li>Delivered a production voice assistant from scratch as sole backend engineer, integrating Google Speech-to-Text and Gemini LLM across voice and text input, LLM routing, database retrieval, and plain language response generation.</li>
+        <li>Designed a hybrid LLM routing layer handling common queries through predefined templates and open ended queries through controlled fallback logic, driving out of context response rate from 1 in 6 queries to near zero.</li>
+        <li>Cut average response latency by approximately 30% measured via log timing by rearchitecting API concurrency, restructuring inference execution, and deploying behind Nginx to sustain throughput under real load.</li>
       </ul>
     </div>
   </div>
@@ -234,9 +234,9 @@
       <div class="exp-role">Assistant System Engineer</div>
       <div class="exp-company">Tata Consultancy Services Ltd · Mumbai, Maharashtra, India</div>
       <ul class="exp-list">
-        <li>Engineered backend modules for an enterprise CRM platform supporting 3,000+ users, owning quote and order lifecycle management, customer portals, catalog configuration, and inventory management across large-scale distributed production systems.</li>
-        <li>Improved order processing efficiency and system stability by 15% through SQL query tuning, performance profiling, and backend workflow optimization across production infrastructure.</li>
-        <li>Delivered backend, database, and UI features iteratively in Agile environments with consistent uptime across distributed systems.</li>
+        <li>Contributed to a 15% team-wide gain in order processing efficiency by analyzing SQL data patterns and workflow bottlenecks across a Siebel CRM serving 3,000+ users.</li>
+        <li>Built and configured CRM workflows, applets, and field level validations for order processing and billing flows, translating business requirements into backend logic and UI updates.</li>
+        <li>Maintained system availability by diagnosing failed workflows, recovering stuck transactions, and resolving backend issues across order and billing systems.</li>
       </ul>
     </div>
   </div>
@@ -324,6 +324,25 @@
     <div class="project" data-hover>
       <div class="project-num">005</div>
       <div>
+        <div class="project-title">Log Aggregation Service</div>
+        <div class="project-desc">Real-time log aggregation pipeline in Go with gRPC ingestion, Kafka message queue, Prometheus observability, and Kubernetes deployment.</div>
+        <div class="project-tech"><span>Go</span><span>gRPC</span><span>Apache Kafka</span><span>Kubernetes</span><span>Prometheus</span><span>Docker</span></div>
+      </div>
+      <div class="project-arrow">↗</div>
+      <div class="project-details">
+        <div class="project-details-inner">
+          <p>Built a gRPC server that accepts log entries from clients with service name, log level, message, and timestamp fields, publishing each entry to a Kafka topic for async processing.</p>
+          <p>Implemented a Kafka consumer with an in-memory store supporting filtering by service and level, exposed via a REST query API. Prometheus metrics track logs received per second and processing latency at p50, p95, and p99.</p>
+          <p>Deployed all services on Kubernetes using minikube with separate deployments for the gRPC server, consumer, and REST API. Benchmarked at <strong>3,178 req/s</strong> throughput with <strong>14.2ms</strong> median latency and <strong>zero errors</strong> across <strong>10,000</strong> concurrent requests.</p>
+          <div class="project-links">
+            <a href="https://github.com/Vidit1012/log-aggregator" data-hover>github →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="project" data-hover>
+      <div class="project-num">006</div>
+      <div>
         <div class="project-title">Object Detection Benchmarking & Analysis</div>
         <div class="project-desc">Benchmarked YOLOv5, SSD, and Faster R-CNN on the Pascal VOC 2012 dataset across accuracy and inference speed.</div>
         <div class="project-tech"><span>Python</span><span>PyTorch</span><span>OpenCV</span><span>TorchVision</span><span>Matplotlib</span></div>
@@ -340,7 +359,7 @@
       </div>
     </div>
     <div class="project" data-hover>
-      <div class="project-num">006</div>
+      <div class="project-num">007</div>
       <div>
         <div class="project-title">Sign Me Up — Sign Language Classification System</div>
         <div class="project-desc">Real-time ML-powered gesture recognition tool that classifies sign language from uploaded images, built to improve accessibility for speech-impaired users.</div>
@@ -359,7 +378,7 @@
       </div>
     </div>
     <div class="project" data-hover>
-      <div class="project-num">007</div>
+      <div class="project-num">008</div>
       <div>
         <div class="project-title">Enhanced Detection of PFAS Using Neural Networks</div>
         <div class="project-desc">Neural network classifier for per- and polyfluoroalkyl substances using molecular SMILES strings and engineered chemical features.</div>
@@ -377,7 +396,7 @@
       </div>
     </div>
     <div class="project" data-hover>
-      <div class="project-num">008</div>
+      <div class="project-num">009</div>
       <div>
         <div class="project-title">AI Model War — DeepSeek vs ChatGPT</div>
         <div class="project-desc">Database-driven analysis of LLM performance using a normalized PostgreSQL schema, optimized queries, and indexing strategies.</div>
@@ -395,7 +414,7 @@
       </div>
     </div>
     <div class="project" data-hover>
-      <div class="project-num">009</div>
+      <div class="project-num">010</div>
       <div>
         <div class="project-title">Fraudulent Job Posting Detection</div>
         <div class="project-desc">Supervised learning pipeline to flag fake job listings, using resampling techniques to handle severe class imbalance.</div>
@@ -413,7 +432,7 @@
       </div>
     </div>
     <div class="project" data-hover>
-      <div class="project-num">010</div>
+      <div class="project-num">011</div>
       <div>
         <div class="project-title">Medical Report Generation Using Chest X-ray</div>
         <div class="project-desc">Attention-based encoder-decoder model that generates diagnostic text reports directly from chest X-ray images.</div>
@@ -483,7 +502,7 @@
         <span class="social-label">Email</span>
         <span class="social-handle">viditprabhu13@gmail.com ↗</span>
       </a>
-      <a href="https://www.linkedin.com/in/vidit-prabhu-5367261a9/" target="_blank" rel="noopener" class="social-link" data-hover>
+      <a href="https://www.linkedin.com/in/vidit-prabhu/" target="_blank" rel="noopener" class="social-link" data-hover>
         <span class="social-label">LinkedIn</span>
         <span class="social-handle">Vidit Prabhu ↗</span>
       </a>
